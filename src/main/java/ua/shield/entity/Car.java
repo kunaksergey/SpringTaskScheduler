@@ -1,4 +1,4 @@
-package Entity;
+package ua.shield.entity;
 
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;

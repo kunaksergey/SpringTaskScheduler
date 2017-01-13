@@ -1,4 +1,4 @@
-package Entity;
+package ua.shield.entity;
 
 import org.springframework.data.repository.CrudRepository;
 

@@ -1,4 +1,4 @@
-package Entity;
+package ua.shield.entity;
 
 import com.google.common.collect.Lists;
 import org.joda.time.DateTime;
@@ -17,20 +17,23 @@ import java.util.List;
 @Service("carService")
 @Repository
 @Transactional
-public class CarServiceImpl implements CarService {
+public class CarServiceImpl  implements CarService{
     final Logger logger= LoggerFactory.getLogger(CarServiceImpl.class);
 
     @Autowired
     CarRepository carRepository;
 
+    @Override
     public List<Car> findAll() {
         return Lists.newArrayList(carRepository.findAll());
     }
 
+    @Override
     public Car save(Car car) {
         return carRepository.save(car);
     }
 
+    @Override
     public void updateCarAgeJob() {
         List<Car> cars=findAll();
         DateTime currentDate= DateTime.now();
@@ -43,4 +46,5 @@ public class CarServiceImpl implements CarService {
         }
         logger.info("Car age apdate job complete successfully");
     }
+
 }

@@ -1,4 +1,4 @@
-package Entity;
+package ua.shield.entity;
 
 import java.util.List;
 
